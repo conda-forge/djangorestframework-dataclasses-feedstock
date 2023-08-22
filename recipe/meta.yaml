@@ -1,5 +1,5 @@
 {% set name = "djangorestframework-dataclasses" %}
-{% set version = "1.2.0" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/djangorestframework-dataclasses-{{ version }}.tar.gz
-  sha256: 4fa8d93a19a3e256487674e9c654b45992bc76de155bd097eced6fe4af4100a2
+  sha256: b061ef12f23394e91107f9b915dec38fb0a69d97a0ac9e62207aa90908375211
 
 build:
   noarch: python
@@ -28,7 +28,7 @@ requirements:
 
 test:
   commands:
-    - python -c "from django.conf import settings; settings.configure(DEBUG=True); from rest_framework_dataclasses.serializers import DataclassSerializer"  
+    - python -c "from django.conf import settings; settings.configure(DEBUG=True); from rest_framework_dataclasses.serializers import DataclassSerializer"
     - pip check
   requires:
     - pip
